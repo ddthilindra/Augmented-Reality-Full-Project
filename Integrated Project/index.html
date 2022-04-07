@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AR Assignment</title>
+    <!-- include A-Frame obviously -->
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <!-- include ar.js for A-Frame -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        
+        <a-assets>
+            <a-asset-item id="modelobj" src="../IT19049496/assets/artifacts/model.obj"></a-asset-item>
+            <a-asset-item id="modelmtl" src="../IT19049496/assets/artifacts/model.mtl"></a-asset-item>
+
+            <a-asset-item id="etobj" src="../IT18007398/assets/artifacts/EiffelTower.obj"></a-asset-item>
+            <a-asset-item id="etmtl" src="../IT18007398/assets/artifacts/EiffelTower.mtl"></a-asset-item>
+
+            <a-asset-item id="3dobj" src="../IT19055954/assets/artifacts/picc.obj"></a-asset-item>
+            <a-asset-item id="3dmtl" src="../IT19055954/assets/artifacts/picc.mtl"></a-asset-item>
+
+            <a-asset-item id="prmdobj" src="../IT18146820/assets/artifacts/pyramide.obj"></a-asset-item>
+            <a-asset-item id="prmdmtl" src="../IT18146820/assets/artifacts/pyramide.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset='custom' type="pattern" url="../IT19049496/assets/custom_marker/pattern-deshitha.patt">
+
+            <a-entity obj-model="obj: #modelobj; mtl: #modelmtl " position="0 0.8 0" rotation="-90 -45 0" scale="0.005 0.005 0.005"></a-entity>
+			
+			<a-entity position="0 0.3 1" text = "value: Moai; color: blue; wrap-count: 10"></a-entity>
+			<a-entity position="0 0 1" text = "value: Deshitha Thilindra H.B IT19049496; color: white; wrap-count: 18"></a-entity>
+
+        </a-marker>
+
+        <a-marker preset='custom' type="pattern" url="../IT18007398/assets/custom_marker/pattern-pasindu.patt">
+
+            <a-entity obj-model="obj: #etobj; mtl: #etmtl " position="0 0.8 0" rotation="0 -45 0" scale="0.03 0.03 0.03"></a-entity>
+            
+            <a-entity position="0 0.3 1" text = "value: Eiffel Tower; color: blue; wrap-count: 10"></a-entity>
+			<a-entity position="0 0 1" text = "value: Pridarshana K.W.P.S.D IT18007398; color: white; wrap-count: 20"></a-entity>
+
+        </a-marker>
+
+        <a-marker preset='custom' type="pattern" url="../IT19055954/assets/custom_marker/pattern-sandun.patt">
+
+            <a-entity obj-model="obj: #3dobj; mtl: #3dmtl " position="0 0.8 0" rotation="0 45 0"scale="0.00038 0.00038 0.00038"></a-entity>
+
+            <a-entity position="0 0.3 1" text = "value: Maison Carrée; color: blue; wrap-count: 12"></a-entity>
+			<a-entity position="0 0 1" text = "value: Sandun Samaranayake S.G IT19055954; color: white; wrap-count: 22"></a-entity>
+
+        </a-marker>
+
+        <a-marker preset='custom' type="pattern" url="../IT18146820/assets/custom_marker/pattern-thimira.patt">
+
+            <a-entity obj-model="obj: #prmdobj; mtl: #prmdmtl " position="0 0.8 0" rotation="0 -45 0" scale="4 4 4"></a-entity>
+            
+            <a-entity position="0 0.3 1" text = "value: Pyramide; color: blue; wrap-count: 10"></a-entity>
+			<a-entity position="0 0 1" text = "value: Kavinda K.T.S IT18146820; color: white; wrap-count: 15"></a-entity>
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+</body>
+
+</html>

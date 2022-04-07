@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- include A-Frame obviously -->
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <!-- include ar.js for A-Frame -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        
+        <a-assets>
+            <a-asset-item id="etobj" src="assets/artifacts/EiffelTower.obj"></a-asset-item>
+            <a-asset-item id="etmtl" src="assets/artifacts/EiffelTower.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset='custom' type="pattern" url="assets/custom_marker/pattern-pasindu.patt">
+
+            <a-entity obj-model="obj: #etobj; 
+                mtl: #etmtl " position="0 0.8 0" rotation="0 -45 0" 
+                scale="0.03 0.03 0.03">
+            </a-entity>
+			
+			<a-entity position="0 0.3 1" text = "value: Eiffel Tower; color: blue; wrap-count: 10"></a-entity>
+			<a-entity position="0 0 1" text = "value: Pridarshana K.W.P.S.D IT18007398; color: white; wrap-count: 20"></a-entity>
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
